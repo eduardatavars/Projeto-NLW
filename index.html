@@ -6,35 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div id="app">
+        <form onsubmit="salvarAtividade(event)">
+            <div id="place" class="card-bg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6667 8.33335C16.6667 13.3334 10 18.3334 10 18.3334C10 18.3334 3.33337 13.3334 3.33337 8.33335C3.33337 6.56524 4.03575 4.86955 5.286 3.61931C6.53624 2.36907 8.23193 1.66669 10 1.66669C11.7682 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 10.8334C11.3808 10.8334 12.5 9.71407 12.5 8.33335C12.5 6.95264 11.3808 5.83335 10 5.83335C8.61933 5.83335 7.50004 6.95264 7.50004 8.33335C7.50004 9.71407 8.61933 10.8334 10 10.8334Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Florianópolis, SC
+               </div> 
 
-    <form onsubmit="salvarAtividade(event)">
-        <div>
-            <input type="text" placeholder="Qual a atividade?" name="atividade" required>
-        </div>
+            <div class="fields">
+                <div class="field-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.4883 2.155C10.1758 1.84242 9.75199 1.66676 9.31 1.66667H3.33333C2.89131 1.66667 2.46738 1.84226 2.15482 2.15482C1.84226 2.46738 1.66667 2.89131 1.66667 3.33333V9.31C1.66676 9.75199 1.84242 10.1758 2.155 10.4883L9.40833 17.7417C9.7871 18.118 10.2994 18.3293 10.8333 18.3293C11.3673 18.3293 11.8796 18.118 12.2583 17.7417L17.7417 12.2583C18.118 11.8796 18.3293 11.3673 18.3293 10.8333C18.3293 10.2994 18.118 9.7871 17.7417 9.40833L10.4883 2.155Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.25 6.66667C6.48012 6.66667 6.66667 6.48012 6.66667 6.25C6.66667 6.01988 6.48012 5.83333 6.25 5.83333C6.01988 5.83333 5.83333 6.01988 5.83333 6.25C5.83333 6.48012 6.01988 6.66667 6.25 6.66667Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    <input type="text" placeholder="Qual a atividade?" name="atividade" required>
+                </div>
+        
+                <div class="field-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66667 1.66669V5.00002M13.3333 1.66669V5.00002M2.5 8.33335H17.5M4.16667 3.33335H15.8333C16.7538 3.33335 17.5 4.07955 17.5 5.00002V16.6667C17.5 17.5872 16.7538 18.3334 15.8333 18.3334H4.16667C3.24619 18.3334 2.5 17.5872 2.5 16.6667V5.00002C2.5 4.07955 3.24619 3.33335 4.16667 3.33335Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    <select name="dia">
+                        <option value="2024-03-01">01 de fevereiro</option>
+                    </select>
+                </div>
+        
+                <div class="field-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.99996 5.00002V10L13.3333 11.6667M18.3333 10C18.3333 14.6024 14.6023 18.3334 9.99996 18.3334C5.39759 18.3334 1.66663 14.6024 1.66663 10C1.66663 5.39765 5.39759 1.66669 9.99996 1.66669C14.6023 1.66669 18.3333 5.39765 18.3333 10Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
 
-        <div>
-            <select name="dia">
-                <option value="2024-03-01">01 de fevereiro</option>
-            </select>
-        </div>
-
-        <div>
-            <select name="hora">
-                <option value="10:30">10:30</option>
-            </select>
-        </div>
-        <button type="submit">Salvar atividade</button>
-    </form>
-
-    <main>
-        <h1>Atividades</h1>
+                    <select name="hora">
+                        <option value="10:30">10:30</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Salvar atividade</button>
+        </form>
     
-        <section>
-        </section>
-    </main>
+        <main>
+            <h1>Atividades</h1>
+        
+            <section>
+            </section>
+        </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
